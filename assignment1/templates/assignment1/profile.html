@@ -1,0 +1,41 @@
+{% extends 'assignment1/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'assignment1/css/home_style.css' %}">
+
+     <div class=container>
+
+      <section class="banner_top">
+
+        <h4> <b> Welcome {{user.username}}! </b> </h4>
+          
+      </section>  
+      
+      
+      <section class="body_part_1">
+
+        <h4> <b> User Info </b> </h4>
+        <div class = "homeInfo">
+        <div class = "leftInfo">
+        
+          
+          <div class = "userList">
+            
+            <h5>{{user.username}}</h5>
+            <p>{{user.firstname}} {{user.lastname}}</p>
+            <p>{{user.email}}</p>
+          </div>
+         
+        </div>
+
+        
+        </div>
+
+        
+      </section>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'assignment1/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'assignment1/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assignment1/css/home_style.css' %}">
+
+    <div class="container">
+      <section class="banner_top">
+        <h4 class = "reg">  Don't have an Account? <b><a href="{% url 'register' %}">SignUp</a> </b> </h4>
+      </section>
+    </div>
+
+    <div class="container" style="margin-top: 30px;">
+    <form action="" method="POST">
+      {% csrf_token %}
+      <fieldset class="form-group">
+          {{ form}}
+      </fieldset>
+      
+      <button class="button ">Login</button>
+    </form>
+    </div>
+{% endblock %}

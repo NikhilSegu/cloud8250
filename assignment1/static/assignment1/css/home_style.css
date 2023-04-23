@@ -1,0 +1,103 @@
+{% load static%}
+
+body,h1,h2,h3,h4,h5,h6,p,ul,li{margin:0;padding:0;}
+body{font-family:arial;}
+ul,li{list-style:none;}
+*{box-sizing:border-box;}
+a{text-decoration:none;}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{width:1013px;margin:0 auto;}
+header{width:100%;float:left;margin-top:23px;padding-left:30px;padding-right:30px;}
+.header_left{float:left;}
+.header_left a{float:left;}
+.header_left a img{float:left;}
+.header_right{float:right;}
+.header_right ul{float:left;}
+.header_right ul li{float:left;padding-left:40px; font-size:16px;color:#fff;cursor:pointer;padding-top:10px;color:#414141;font-weight:bold;font-size:14px;}
+.header_right ul li a{float:left;color:#fff;cursor:pointer;padding-top:10px;color:#414141;font-weight:bold;font-size:14px;}
+.header_right ul li .signin{float:left; padding:10px 15px; color:#000000; background-color:#ffd633;border:1px solid #ffd633;cursor:pointer;font-weight:bold;font-size:14px;}
+.header_right ul li a:hover{color:#ffd633;}
+.header_right ul li .signin:hover{background-color:#333333;border:1px solid #333333;padding:10px 15px;color:#fff;}
+
+.banner_top{width:100%;float:left;padding-left:30px; margin-top:50px;}
+.banner_top h4{font-size:40px; color:#292929;letter-spacing:2;margin-bottom:10px;font-family:arial;font-weight:normal;}
+.banner_top h4 b {color:#ffd633}
+.banner_top p{font-size:40px; color:#b3b3b3;font-weight:lighter;font-family:arial;}
+
+
+.banner a{float:right;margin-right:130px;margin-top:245px;background-color:#ff6600;padding:15px 15px;color:#fff;font-weight:normal;font-family:arial;}
+.banner a:hover{background-color:#333333;padding:15px 15px;}
+
+
+.body_part_1{width:100%;float:left;margin-top:60px;}
+.coding{width:100%;float:left;}
+.coding h3{color:#444444;font-size:45px;font-family:arial;font-weight:normal;text-transform:uppercase;padding-left:5px;margin-bottom:15px;}
+.coding p{color:#bebebe;font-size:18px;font-weight:lighter;font-family:arial;}
+.bpart_1_bottom{width:100%;float:left;margin-top:60px;}
+.bpart_1_left{width:190px;float:left;}
+.bpart_1_right{float:left;padding-left:90px;}
+.bpart_1_right img{margin-bottom:20px;}
+.bpart_1_right h4{color:#444444;font-size:35px;font-family:arial;font-weight:normal;margin-bottom:45px;}
+.bpart_1_right p{color:#4f4f4f;line-height:1.5;}
+
+.body_part_2{width:100%;float:left;margin-top:70px;}
+.top{float:left;width:100%;background:url(../images/b2_background.jpg);height:408px;margin-top:70px;position:relative;background-size:cover;}
+.b2_left{float:left;padding-left:30px;color:#ffffff;margin-top:30px;height:200px;width:600px;}
+.b2_list{float:left;margin-bottom:30px;}
+.b2_list_left{float:left;margin-right:30px;width:43px;height:40px;}
+.b2_list_right{float:left;}
+.b2_list_right h4{text-transform:uppercase;font-size:23px;margin-bottom:10px;font-weight:lighter;}
+.b2_list_right p{color:#cccccc;line-height:1.25;}
+.b2_right{position:absolute;right:0;margin-right:200px;}
+.b2_content_2{float:left;margin-top:30px;font-family:arial; margin-top:80px}
+.b2_content_2 h4{font-size:35px;font-weight:normal;margin-bottom:20px;}
+.b2_content_2 h6{line-height:1.5;margin-bottom:15px;font-weight:normal;font-size:16px;}
+.b2_content_2 p{float:left;padding-top:8px;padding-right:15px;font-size:18px;}
+.b2_content_2  ul{float:left;}
+.b2_content_2  ul li{float:left;}
+.store_apple{float:left;width:43px;height:43px;background:url(../images/apple.png) no-repeat;margin-right:15px;}
+.store_and{float:left;width:43px;height:43px;background:url(../images/and.png) no-repeat;}
+.store_apple:hover{width:43px;height:43px;background:url(../images/apple_hover.png) no-repeat;}
+.store_and:hover{width:43px;height:43px;background:url(../images/and_hover.png) no-repeat;}
+
+
+
+
+.image{width:100%;float:left;margin-top:10px;}
+.image img{float:left;}
+
+footer{width:100%;float:left;background-color:#000;color:#eeeeee; margin-top: 70px}
+.footer_top{float:left;width:100%;margin-top:20px;}
+.footer_bottom{float:left;width:100%;margin-top:2px;margin-bottom:3px;border-top:1px solid #363636;}
+.footer_bottom p{margin-top:3px;float:left;width:33.3%;font-size:12px;font-weight:normal;}
+option{background-color:#000;color:#eeeeee;}
+
+.banner_top h4 .reg{font-size:20px; color:#292929;}
+
+.homeInfo{width:100%}
+.homeInfo .leftInfo{width:50%; position:absolute;}
+.userList {
+  background-color: #ffd633;
+  width: 70%;
+  
+  padding: 20px;
+  margin: 20px;
+}
+.userList1{
+  background-color: #ffd633;
+  width: 100%;
+  
+  padding: 20px;
+  margin: 20px;
+}
+.userList1 table, th, td {
+    border: 1px solid black;
+  }
+.homeInfo .rightInfo{width:50%;float:right; position:relative;}
+.userInfo {width:100%;background-color: #ffd633;width: 70%;padding: 20px;margin: 20px;}

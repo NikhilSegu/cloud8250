@@ -1,0 +1,18 @@
+{% extends 'assignment1/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'assignment1/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assignment1/css/home_style.css' %}">
+
+    <div class="container">
+      <section class="banner_top">
+        <h4 class = "reg">  Successfully Logged Out. <b><a href="{% url 'login' %}">Login?</a> </b> </h4>
+      </section>
+    </div>
+
+    
+    </div>
+{% endblock %}

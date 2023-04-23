@@ -1,0 +1,80 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>About Nikhil</title>
+	<link rel="stylesheet" type = "text/css" href="{% static 'assignment1/css/about_style.css' %}"/>
+    <script src="https://kit.fontawesome.com/572ffce8ef.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+
+        <div class="profilePic">
+            <img src=" {% static 'assignment1/images/Nick.jpg' %}" title="SaiNikhil Segu" />
+            <h2>SaiNikhil Segu</h2>
+        </div>
+
+        <ul>
+            <li><a href="{% url 'aboutContent' %}">About</a></li>
+            <li><a href="{% url 'education' %}">Education</a></li>
+            <li><a href="{% url 'workExperience' %}">Work Experience</a></li>
+            <li><a href="{% url 'skills' %}">Skills</a></li>
+            <li><a href="{% url 'achievements' %}">Awards and Recognition</a></li>
+        </ul> 
+        <div class="social_media">
+          <a href="https://www.linkedin.com/in/nikhilsegu/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-solid fa-mobile-screen-button"></i></a>
+          <a href="https://www.instagram.com/nick_09/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="main_content">
+
+        <header>
+            <div class="header_right">
+             <ul>
+                <li><a href="{% url 'home' %}" title="Home">Home </a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'profile' %}" class="profile"> Profile </a></li>
+                {% endif %}
+
+                <li><a href="{% url 'aboutContent' %}" title="About">Creator </a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}" class="signin"> Logout </a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}" class="signin"> LogIn </a></li>
+                    <li><a href="{% url 'register' %}" class="signin"> Register </a></li>
+                {% endif %}
+             </ul>
+            </div>
+        </header>
+
+        <div id="content" class="info">
+
+            {% block content %} {% endblock %}
+          
+        </div>
+      
+    </div>
+</div>
+
+</body>
+
+</html>
+<!---
+<script>
+    
+    function eduContent(){
+        var eduCont = document.querySelector('#education');
+        var aboutCont = document.querySelector('#about');
+        console.log(eduCont);
+        aboutCont.style.display="none";
+        eduCont.style.display="block";
+    }
+
+</script>
+-->

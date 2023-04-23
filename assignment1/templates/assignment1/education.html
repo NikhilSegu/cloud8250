@@ -1,0 +1,58 @@
+{% extends 'assignment1/about.html' %}
+{% load static %}
+
+
+{% block content %}
+
+	<div>
+		
+		<h5> I am currently pursuing a Master's degree in Computer Science at the University of Cincinnati. I have completed several projects during my academic career.</h5>
+
+		<h5> I started an Android application called <i>HelloDoc</i> during my 3rd semester of my bachelor's degree in 2015. This app helps users find the nearest hospitals based on a list of diseases provided in the app. It also allows users to book appointments and stores records for future reference. This app was presented at TechExpo 2016 at my university and won first runner-up.</h5>
+
+		<h5> With a team of three, we developed an application called <i> Automatic Schedule Generator</i>. It is a Genetic algorithm-based application that automatically creates an approximate timetable by considering the free period model of faculties in the institution. This project was showcased at TechExpo 2017 and won first prize at the university level competition. Later, this project was adopted and used by the CS department at my university.</h5>
+
+		<h5> I successfully implemented an IEEE paper-based project titled <i>Revocable Storage Identity-Based Encryption for Secured Data Sharing in Cloud Computing</i> as my final year project for my bachelor's degree. The main objective of this project was to provide forward and backward security for storage files that are encrypted in base 64 RSA format.</h5>
+	</div>	 
+
+	<div class="education">
+
+		<div class="logo">
+
+			<img src="{% static 'assignment1/images/UoC_logo.png' %}">
+
+		</div>
+		
+		<div class="eduContent">
+			
+			<h3> <b>University of Cincinnati</b></h3>
+			<p></p>
+			<h5><i>Masters of Engineering in Computer Science</i></h5>
+			<h5><i>Exp. Graduate: Sep 2023</i></h5>
+			<h5>Grade: 4.0/4.0</h5>
+
+		</div>
+	</div>
+
+	<div class="education">
+
+		<div class="logo">
+
+			<img src="{% static 'assignment1/images/veltech_logo.png' %}">
+
+		</div>
+		
+		<div class="eduContent">
+			
+			<h3> <b>Vel Tech University</b></h3>
+			<p></p>
+			<h5><i>Bachelors of Technology in Computer Science</i></h5>
+			<h5><i>Graduate: 2018</i></h5>
+			<h5>Grade: 9.15/10.0</h5>
+
+		</div>
+	</div>
+
+	
+
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+ <head> 
+    <title> SaiNikhil Segu</title>
+    <link type="text/css" href="{% static 'assignment1/css/home_style.css' %}" rel="stylesheet"/>
+</head>
+<body>
+	<div class = "container">
+		<header>
+			<div class="header_right">
+		     <ul>
+			   	<li><a href="{% url 'home' %}" title="Home">Home </a></li>
+
+			   	{% if user.is_authenticated %}
+					<li><a href="{% url 'profile' %}" class="profile"> Profile </a></li>
+					{% endif %}
+
+					<li><a href="{% url 'aboutContent' %}" title="AboutCreator">Creator </a></li>
+
+					{% if user.is_authenticated %}
+					<li><a href="{% url 'logout' %}" class="signin"> Logout </a></li>
+					{% else %}
+					<li><a href="{% url 'login' %}" class="signin"> LogIn </a></li>
+					<li><a href="{% url 'register' %}" class="signin"> Register </a></li>
+					{% endif %}
+					
+
+			 </ul>
+			</div>
+		</header>
+	
+	</div>	
+
+	{% block content %}
+	{% endblock content%}
+
+</body>
+</html>

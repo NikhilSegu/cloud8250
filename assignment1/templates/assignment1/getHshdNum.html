@@ -1,0 +1,146 @@
+{% extends 'assignment1/base.html' %}
+
+{% load static %}
+
+{% block content %}
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>	
+  	<div class=container>
+		
+		<section class="body_part_1">
+
+			<h4> <b> 
+				{% for message in messages %}
+            		<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        		{% endfor %} 
+        		</b> 
+        	</h4>
+			<div class = "homeInfo">
+			<div class = "">
+			{% if user.is_authenticated %}
+				
+				<div class = "userList">
+					<form action="" method="POST" enctype="multipart/form-data">
+				      	{% csrf_token %}
+				      	
+				      	<input type='text' name='Hshd_num' placeholder="Enter Hshd_num" />
+				      
+	          			<input type='submit' value='submit'/>
+				   
+				    </form>
+				</div>
+
+				{% if result%}
+				<h2> Sorted Transaction and Product Data</h2>
+				
+				<div class = "userList1">
+					<table>
+					  <thead>
+					    <tr>
+					      <th>HSHD_NUM</th>
+					      <th>BASKET_NUM</th>
+					      <th>PURCHASE</th>
+					      <th>PRODUCT_NUM</th>
+					      <th>COMMODITY</th>
+					      <th>DEPARTMENT</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    {% for k, val in result.items %}
+					    	
+					    	<tr>
+					        <td>{{ Hshd_num}}</td>
+					        <td>{{ val.1 }}</td>
+					        <td>{{ val.2 }}</td>
+					        <td>{{ val.3 }}</td>
+					        <td>{{ val.4 }}</td>
+					        <td>{{ val.5 }}</td>
+
+					        
+					      </tr>
+					    {% endfor %}
+					  </tbody>
+					</table>
+
+				</div>
+			
+				{% endif %}
+				
+			{% endif %}
+			</div>
+
+			
+
+			</div>
+
+			
+		</section>
+
+		<section class="body_part_1">
+			<h1>Household Income Bar Chart</h1>
+		  	<div>
+			    <canvas id="bar-chart"></canvas>
+			</div>
+
+			<script>
+				var ctx = document.getElementById('bar-chart').getContext('2d');
+				var myChart = new Chart(ctx, {
+			        type: 'bar',
+			        data: {
+			            labels: [{% for label in incomeLabel %} '{{ label }}', {% endfor %}],
+			            datasets: [{
+			                label:'Household',
+			                data: [{% for number in incomeCount %} '{{ number }}', {% endfor %}],
+			                backgroundColor:[
+			                'rgba(255, 99, 132, 1)',
+			                'rgba(54, 162, 135, 1)',
+			                'rgba(255, 206, 86, 1)',
+			                'rgba(75, 192, 192, 1)',
+			                'rgba(151, 102, 132, 1)',
+			                'rgba(153, 99, 132, 1)',
+			                'rgba(255, 159, 64, 1)',
+			                'rgba(255, 99, 132, 1)',
+			                'rgba(54, 162, 135, 1)',
+			                'rgba(25, 206, 86, 1)',
+			                'rgba(211, 192, 192, 1)',
+			                'rgba(234, 102, 132, 1)',
+			                'rgba(153, 99, 132, 1)',
+			                'rgba(255, 159, 64, 1)',
+			                'gree',
+			                'yellow',
+			                ],
+
+			                borderColor: [
+			                'rgba(54, 162, 135, 1)',
+			                'rgba(25, 206, 86, 1)',
+			                'rgba(211, 192, 192, 1)',
+			                'rgba(234, 102, 132, 1)',
+			                'rgba(153, 99, 132, 1)',
+			                'rgba(255, 159, 64, 1)',
+
+			                ],
+
+			                borderWidth: 1
+			            }]
+			        },
+
+			        options: {
+			            scales: {
+			                yAxes: [{
+			                    ticks: {
+			                        beginAtZero: true
+			                    }
+			                }]
+			            }
+			        }
+			    })
+
+		    
+			</script>
+
+			
+		</section>
+
+	
+	
+{% endblock content%}
